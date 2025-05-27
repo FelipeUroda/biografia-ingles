@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biografia</title>
+    <style>
+        :root {
+        --primary: #3498db;
+        --background: linear-gradient(135deg, #e0f7fa, #ffffff);
+        --text-main: #2c3e50;
+        --text-secondary: #555;
+        --card-bg: #ffffff;
+        }
+
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+
+        html, body {
+        height: 100%;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--background);
+        overflow: hidden;
+        }
+
+        .fullscreen-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 40px 20px;
+        }
+
+        .bio-card {
+        background: var(--card-bg);
+        border-radius: 24px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        text-align: center;
+        padding: 60px 40px;
+        width: 100%;
+        max-width: 700px;
+        animation: fadeIn 1s ease-out;
+        }
+
+        .profile-img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 6px solid var(--primary);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        margin-bottom: 25px;
+        transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+        transform: scale(1.06);
+        }
+
+        h1 {
+        font-size: 2.8em;
+        color: var(--text-main);
+        margin-bottom: 12px;
+        }
+
+        .divider {
+        width: 80px;
+        height: 5px;
+        background-color: var(--primary);
+        margin: 12px auto 30px;
+        border-radius: 3px;
+        }
+
+        p {
+        font-size: 1.2em;
+        line-height: 1.9;
+        color: var(--text-secondary);
+        padding: 0 10px;
+        }
+
+        @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
+
+        @media (max-width: 600px) {
+        .bio-card {
+            padding: 40px 25px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        .profile-img {
+            width: 380px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 0; /* Imagem quadrada */
+            border: 8px solid var(--primary);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        @media (max-width: 600px) {
+            .profile-img {
+                width: 240px;
+                height: 240px;
+            }
+        }
+
+
+
+
+        p {
+            font-size: 1em;
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fullscreen-container">
+        <div class="bio-card">
+        <!-- 🖼 Substitua pelo caminho da sua imagem -->
+        <img src="./img/uroda.jpg" alt="Foto da Pessoa" class="profile-img" />
+
+        <h1>Vilmar Rogério Kazienko Uroda</h1>
+        <div class="divider"></div>
+
+        <p>
+    Vilmar Rogério Kazienko Uroda is a Brazilian citizen recognized for his dedication to the community and his commitment to values such as hard work, integrity, and respect. Born into a humble family, he has always demonstrated a strong sense of responsibility and empathy toward those around him.
+
+    Throughout his life, he built a path marked by effort and perseverance. Whether in his professional or personal life, Vilmar has always sought to contribute positively to the environment he is part of. His ethical conduct and kind manner of dealing with people have made him a respected figure among family, friends, and colleagues.
+
+    He is also remembered for his love of nature, the stories he shared with wisdom, and the way he always valued the simple joys of everyday life. For many, Vilmar is a symbol of strength, honesty, and inspiration.
+
+
+        </p>
+        </div>
+    </div>
+
+</body>
+</html>

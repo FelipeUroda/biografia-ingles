@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Trabalho de Ingles</title>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        height: 100vh;
+        font-family: sans-serif;
+    }
+
+    .sidebar {
+        width: 200px;
+        background-color: #2c3e50;
+        padding-top: 20px;
+        color: white;
+    }
+
+    .sidebar button {
+        width: 100%;
+        padding: 15px;
+        background: none;
+        border: none;
+        color: white;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .sidebar button:hover {
+        background-color: #34495e;
+    }
+
+    .main {
+        flex: 1;
+        padding: 20px;
+        background-color: #ecf0f1;
+        overflow-y: auto;
+    }
+</style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <button onclick="loadPage('Inicio.html')">🏠 Início</button>
+        <button onclick="loadPage('Uroda.html')">Luis Felipe</button>
+        <button onclick="loadPage('Clara.html')">Clara</button>
+        <button onclick="loadPage('Gloria.html')">Gloria</button>
+        <button onclick="loadPage('Raina.html')">Raina</button>
+        <button onclick="loadPage('Danilo.html')">Danilo</button>
+        <button onclick="loadPage('Hellen.html')">Hellen</button>
+        <button onclick="loadPage('biografia_quiterio.html')">Quiterio</button>
+        <button onclick="loadPage('KAYLAN (2).html')">Kaylan</button>
+        <button onclick="loadPage('Luan.html')">Luan</button>
+        <button onclick="loadPage('Adalia.html')">Adalia</button>
+        <button onclick="loadPage('Rayssa.html')">Rayssa baixa</button>
+        <button onclick="loadPage('RayssaALTA.html')">Rayssa alta</button>
+        <button onclick="loadPage('Ziele.html')">Zielle</button>
+        <button onclick="loadPage('isa.html')">isabela</button>
+        <button onclick="loadPage('thais.html')">thais</button>
+        <button onclick="loadPage('riana.html')">riana</button>
+        <button onclick="loadPage('luara.html')">luara</button>
+        <button onclick="loadPage('kai.html')">kaiane</button>
+        <button onclick="loadPage('welinton.html')">welinton</button>
+        <button onclick="loadPage('cristiane.html')">cristiane</button>
+        <button onclick="loadPage('Isabelingles.html')">Isabel</button>
+        <button onclick="loadPage('JV.html')">Joao Victor</button>
+        <button onclick="loadPage('art.html')">Arthur</button>
+        <button onclick="loadPage('Luis Eduardo.html')">Luis Eduardo</button>
+        <button onclick="loadPage('daniel.html')">daniel</button>
+        <button onclick="loadPage('pedro.html')">pedro</button>
+        <button onclick="loadPage('joaoF.html')">Joao Felipe</button>
+        <button onclick="loadPage('davi.html')">davi</button>
+        <button onclick="loadPage('Mariac.html')">Maria Clara</button>
+        <button onclick="loadPage('.html')"></button>
+        <button onclick="loadPage('.html')"></button>
+        <button onclick="loadPage('.html')"></button>
+        <button onclick="loadPage('.html')"></button>
+    </div>
+
+    <div class="main" id="main-content">
+        <script>
+            window.onload = () => loadPage('Inicio.html');
+        </script>
+    </div>
+
+    <script>
+        function loadPage(page) {
+        fetch(page)
+            .then(response => {
+            if (!response.ok) {
+                throw new Error("Erro ao carregar: " + page);
+            }
+            return response.text();
+            })
+            .then(html => {
+            document.getElementById("main-content").innerHTML = html;
+            })
+            .catch(error => {
+            document.getElementById("main-content").innerHTML = "<p>Erro ao carregar a página.</p>";
+            console.error(error);
+            });
+        }
+    </script>
+
+</body>
+</html>

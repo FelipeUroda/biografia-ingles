@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography of Maria
+    Silva
+    </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and readable font */
+            margin: 0;
+            background-color: #f4f6f8; /* Softer background tone */
+            color: #333;
+            line-height: 1.7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Centers content on the screen */
+        }
+
+        .container {
+            max-width: 800px; /* Slightly smaller width for better readability */
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 12px; /* More rounded borders */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        h1, h2 {
+            color: #2c3e50; /* More elegant title colors */
+            margin-bottom: 20px;
+            border-bottom: 3px solid #e67e22; /* Colorful highlight bar */
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8em;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: left;
+            color: #555; /* Slightly lighter main text color */
+        }
+
+        .info-box {
+            background-color: #e7f3ff; /* Light background for the information box */
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 6px solid #3498db; /* More modern side highlight */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .info-box:hover {
+            background-color: #d0e9ff;
+        }
+
+        .mandatos, .feitos {
+            padding-left: 25px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            text-align: left;
+            list-style-type: disc; /* More discreet list markers */
+        }
+
+        .mandatos li, .feitos li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .mandatos li:hover, .feitos li:hover {
+            color: #e67e22; /* Highlight on mouse over */
+        }
+
+        .data-falecimento {
+            margin-top: 40px;
+            font-style: italic;
+            color: #777;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: #e67e22;
+            text-decoration: underline;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 30px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Maria Silva</h1>
+        <p class="info-box" id="infoBox">
+            Maria Silva was born in a small town in Brazil in 1955. She grew up in a poor neighborhood but always believed in the power of education. When she was a child, she helped her parents in the fields, but she also studied hard every night.
+        </p>
+
+        <h2>Career of teacher</h2>
+        <p>
+            Maria became a teacher when she was only 20 years old. She didn’t have many resources, but she never gave up. She taught hundreds of children in her community and helped many of them go to college. She didn’t become rich, but she changed many lives.
+        </p>
+
+        <h2>Conquest and Retirement</h2>
+        <p>
+            In 1998, Maria received a local award for her contribution to education. People admired her because she was kind, patient, and dedicated. She always believed that knowledge could break the cycle of poverty.
+        </p>
+        <ul class="feitos">
+            <li>Maria retired in 2015, but she continued to help young students with free tutoring classes.</li>
+
+        <p class="data-falecimento">
+            Maria Silva faleceu em Janeiro de 2020, but her legacy lives on. Maria Silva was not famous, but she was a true hero in her community.
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mandatosList = document.querySelector('.mandatos');
+            const feitosList = document.querySelector('.feitos');
+            const infoBox = document.getElementById('infoBox');
+            const dataFalecimento = document.querySelector('.data-falecimento');
+            const tituloBiografia = document.querySelector('h1');
+
+            if (mandatosList) {
+                const mandatosItens = mandatosList.querySelectorAll('li');
+                mandatosItens.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const originalText = this.textContent;
+                        if (this.textContent === originalText) {
+                            this.textContent = `Term: ${originalText}`;
+                            this.style.fontWeight = 'bold';
+                        } else {
+                            this.textContent = originalText;
+                            this.style.fontWeight = 'normal';
+                        }
+                    });
+                });
+            }
+
+            if (feitosList) {
+                const feitosItens = feitosList.querySelectorAll('li');
+                feitosItens.forEach(item => {
+                    item.addEventListener('click', function() {
+                        alert(`Details about: ${this.textContent}`);
+                    });
+                });
+            }
+
+            if (dataFalecimento) {
+                setTimeout(() => {
+                    dataFalecimento.style.opacity = 1;
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>

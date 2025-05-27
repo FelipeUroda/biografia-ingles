@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography of Antônio Coelho e Silva (Bebé Coelho)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and readable font */
+            margin: 0;
+            background-color: #f4f6f8; /* Softer background tone */
+            color: #333;
+            line-height: 1.7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Centers content on the screen */
+        }
+
+        .container {
+            max-width: 800px; /* Slightly smaller width for better readability */
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 12px; /* More rounded borders */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        h1, h2 {
+            color: #2c3e50; /* More elegant title colors */
+            margin-bottom: 20px;
+            border-bottom: 3px solid #e67e22; /* Colorful highlight bar */
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8em;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: left;
+            color: #555; /* Slightly lighter main text color */
+        }
+
+        .info-box {
+            background-color: #e7f3ff; /* Light background for the information box */
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 6px solid #3498db; /* More modern side highlight */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .info-box:hover {
+            background-color: #d0e9ff;
+        }
+
+        .mandatos, .feitos {
+            padding-left: 25px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            text-align: left;
+            list-style-type: disc; /* More discreet list markers */
+        }
+
+        .mandatos li, .feitos li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .mandatos li:hover, .feitos li:hover {
+            color: #e67e22; /* Highlight on mouse over */
+        }
+
+        .data-falecimento {
+            margin-top: 40px;
+            font-style: italic;
+            color: #777;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: #e67e22;
+            text-decoration: underline;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 30px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Antônio Coelho e Silva (Bebé Coelho)</h1>
+        <p class="info-box" id="infoBox">
+            Born in the village of Jenipapo on December 9, 1923, Antônio Coelho e Silva, affectionately known as Bebé Coelho, left a significant mark on Loreto, Maranhão. Son of Francisco de Souza Coelho and Avelina Pereira da Silva, he was the youngest of eight siblings.
+        </p>
+
+        <h2>Life and Career</h2>
+        <p>
+            Influenced by his godfather, the political leader José do Egito Coelho, Bebé Coelho developed his skills in commerce. He became the owner of one of the oldest and most renowned fabric stores in the city, a landmark at the time.
+        </p>
+        <p>
+            In his personal life, he was initially married to D. Irene Rocha, who passed away shortly after. Later, he married his sister-in-law, D. Guadalupe.
+        </p>
+
+        <h2>Political Career</h2>
+        <p>
+            Bebé Coelho dedicated himself to politics, serving as the mayor of Loreto for three important terms:
+        </p>
+        <ul class="mandatos">
+            <li>February 1956 to November 1958</li>
+            <li>January 1961 to November 1966</li>
+            <li>January 1970 to January 1973</li>
+        </ul>
+
+        <h2>Legacy and Achievements</h2>
+        <p>
+            During his administrations, Bebé Coelho implemented several significant improvements for the community of Loreto. Among his notable achievements are:
+        </p>
+        <ul class="feitos">
+            <li>The arrival of the first ambulance in the municipality.</li>
+            <li>The construction of the wooden bridge over the Balsas River.</li>
+            <li>The creation of the city's first airstrip.</li>
+            <li>The construction of the old public market located in Barão do Rio Branco Square.</li>
+            <li>The paving of Coronel Manoel Santana Avenue.</li>
+            <li>The construction of the famous Bandeirante Gymnasium.</li>
+        </ul>
+
+        <p class="data-falecimento">
+            Antônio Coelho e Silva (Bebé Coelho) passed away on July 26, 2004, leaving a legacy of work and contributions to the development of Loreto.
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mandatosList = document.querySelector('.mandatos');
+            const feitosList = document.querySelector('.feitos');
+            const infoBox = document.getElementById('infoBox');
+            const dataFalecimento = document.querySelector('.data-falecimento');
+            const tituloBiografia = document.querySelector('h1');
+
+            if (mandatosList) {
+                const mandatosItens = mandatosList.querySelectorAll('li');
+                mandatosItens.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const originalText = this.textContent;
+                        if (this.textContent === originalText) {
+                            this.textContent = `Term: ${originalText}`;
+                            this.style.fontWeight = 'bold';
+                        } else {
+                            this.textContent = originalText;
+                            this.style.fontWeight = 'normal';
+                        }
+                    });
+                });
+            }
+
+            if (feitosList) {
+                const feitosItens = feitosList.querySelectorAll('li');
+                feitosItens.forEach(item => {
+                    item.addEventListener('click', function() {
+                        alert(`Details about: ${this.textContent}`);
+                    });
+                });
+            }
+
+            if (dataFalecimento) {
+                setTimeout(() => {
+                    dataFalecimento.style.opacity = 1;
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>

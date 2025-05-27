@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jorge Fernando's Biography</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #ffffff);
+      color: #333;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .bio-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+      animation: fadeIn 1s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .bio-header {
+      text-align: center;
+    }
+
+    .bio-header h1 {
+      color: #00695c;
+      font-size: 2.5rem;
+    }
+
+    .photo {
+      text-align: center;
+    }
+
+    .photo img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #00695c;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .bio-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .bio-header h1 {
+        font-size: 2rem;
+      }
+
+      .photo img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .bio-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bio-container">
+    <div class="bio-header">
+      <h1>Jorge Fernando's Biography</h1>
+    </div>
+
+    <div class="photo">
+      <img src="./img/jf.jpg" alt="Photo of Jorge Fernando" />
+    </div>
+
+    <div class="bio-text">
+      <p>My name is João Filipe and the person I chose was my brother, Jorge Fernando. He was born on September 10, 2009, in the city of Balsas, and his parents are the same as mine: Jânio Fernandes and Cítia Lélia.</p>
+
+      <p>He is very special — a focused person who always strives to give his best. He studied in private schools throughout elementary school, and now he studies at IFMA in São Luís, Monte Castelo campus. He currently lives with our grandmother.</p>
+
+      <p>Jorge has always been by my side, supporting me through everything I needed. He is one of the few true friends I have. We’ve shared many happy and memorable moments together — lots of fights, but even more companionship.</p>
+
+      <p>I truly hope he achieves everything he dreams of. He deserves it.</p>
+    </div>
+  </div>
+</body>
+</html>
